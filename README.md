@@ -67,7 +67,7 @@ This project helped me gain hands-on experience with:
 
 **Screenshots**
 VPC Architecture
-<img width="1280" height="560" alt="image" src="https://github.com/user-attachments/assets/3cb2e3d6-f381-4716-ac4b-e6853052608a" />
+<img width="1601" height="386" alt="VPC Resource Map" src="https://github.com/user-attachments/assets/88ce8b5c-d3c3-4dd1-b242-92e824f74720" />
 
 Healthy Targets
 <img width="1280" height="230" alt="a99110bd-9073-472d-8c49-7a40c2bbdc07" src="https://github.com/user-attachments/assets/70ecda35-8d01-4a21-8924-cb2e99d9bf75" />

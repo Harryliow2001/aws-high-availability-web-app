@@ -73,8 +73,10 @@ Healthy Targets
 <img width="1280" height="230" alt="a99110bd-9073-472d-8c49-7a40c2bbdc07" src="https://github.com/user-attachments/assets/70ecda35-8d01-4a21-8924-cb2e99d9bf75" />
 
 Load Balanced Application
-![Uploading image.png…]()
+<img width="1280" height="560" alt="WhatsApp Image 2026-08-29 at 12 00 10 AM" src="https://github.com/user-attachments/assets/1ac1cdb2-3c06-4650-aec5-0087033627de" />
 
 Auto Scaling Recovery
+<img width="1683" height="595" alt="Auto Scaling" src="https://github.com/user-attachments/assets/c7d67cdb-a1eb-4ceb-9e08-493de118da7e" />
 
 CloudWatch Dashboard
+<img width="1920" height="478" alt="cloudwatch dashboard" src="https://github.com/user-attachments/assets/d16d1a6f-20c7-4e47-abc1-bba37b6b05f3" />

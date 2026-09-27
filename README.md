@@ -106,10 +106,10 @@ EC2 instances use an IAM Instance Role instead of stored AWS credentials. The EC
 Application code is stored in: s3://harry-bucket-project/app/server.py  
 When a new EC2 instance is launched, Launch Template User Data automatically retrieves the latest application file from S3.  
 <img width="534" height="87" alt="fileretrieves3" src="https://github.com/user-attachments/assets/3bea333a-9dff-4dac-a9bb-660e72bf96de" />
-<img width="960" height="367" alt="application" src="https://github.com/user-attachments/assets/a67c3419-ca0f-4b99-aec9-5ed427bc8429" />
 
 ### CI/CD with GitHub Actions
 Automatically deploys application changes to AWS. The pipeline is triggered when files inside the "app/" directory are pushed to the main branch.
+<img width="960" height="367" alt="application" src="https://github.com/user-attachments/assets/a67c3419-ca0f-4b99-aec9-5ed427bc8429" />
 
 ### GitHub OIDC Authentication
 GitHub Actions authenticates to AWS using OpenID Connect instead of long-lived AWS access keys. This removes the need to store permanent AWS Access Key IDs and Secret Access Keys in GitHub. The IAM trust relationship is restricted to this repository and the main branch.
@@ -145,6 +145,7 @@ GitHub Actions automatically:
 - Replaced EC2 instances
 - Deployed the updated application
 <img width="1919" height="781" alt="CICD" src="https://github.com/user-attachments/assets/e92cc277-0879-46b9-8362-f12812a27596" />
+
 
 # What I Learned
 - Designing a highly available AWS VPC architecture

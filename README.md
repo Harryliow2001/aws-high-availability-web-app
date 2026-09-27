@@ -5,8 +5,7 @@ The application runs on private EC2 instances across multiple Availability Zones
 
 
 ## Architecture
-
-![AWS Architecture](./architecture%20diagram.png)
+![Uploading architecture diagram.png…]()
 
 ## AWS Services Used
 - Amazon VPC

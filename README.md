@@ -79,7 +79,7 @@ A Target Tracking Scaling Policy was configured using average EC2 CPU utilizatio
 <img width="1279" height="625" alt="unhealthy" src="https://github.com/user-attachments/assets/1d08079a-17ad-4dd8-9897-d0a32d26bf9d" />
 
 ### Alerting with Amazon SNS
-Integrated with monitoring and Auto Scaling notifications. This provides email notifications when important infrastructure events occur.
+Integrated with monitoring and Auto Scaling notifications. This provides email notifications when important infrastructure events occur.  
 <img width="300" height="550" alt="WhatsApp Image 2026-09-27 at 10 50 39 PM" src="https://github.com/user-attachments/assets/7376df25-dfd7-407d-987f-bf1d6f7ed261" /> <img width="300" height="550" alt="WhatsApp Image 2026-09-27 at 10 50 40 PM" src="https://github.com/user-attachments/assets/e246a204-b9fd-43be-a8bf-8a39a90fa80b" />
 ### Security
 The architecture separates public-facing and application resources using dedicated Security Groups.

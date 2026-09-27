@@ -144,8 +144,8 @@ GitHub Actions automatically:
 - Replaced EC2 instances
 - Deployed the updated application
 <img width="1919" height="781" alt="CICD" src="https://github.com/user-attachments/assets/e92cc277-0879-46b9-8362-f12812a27596" />
+
 # What I Learned
-This project provided hands-on experience with:
 - Designing a highly available AWS VPC architecture
 - Deploying applications across multiple Availability Zones
 - Configuring Application Load Balancers and target groups
@@ -162,19 +162,3 @@ This project provided hands-on experience with:
 - Authenticating GitHub to AWS using OIDC
 - Automating EC2 deployments through Auto Scaling Instance Refresh
 - Troubleshooting AWS networking, health checks, IAM and CI/CD
-
-## Screenshots
-VPC Architecture
-<img width="1601" height="386" alt="VPC Resource Map" src="https://github.com/user-attachments/assets/88ce8b5c-d3c3-4dd1-b242-92e824f74720" />
-
-Healthy Targets
-<img width="1280" height="230" alt="a99110bd-9073-472d-8c49-7a40c2bbdc07" src="https://github.com/user-attachments/assets/70ecda35-8d01-4a21-8924-cb2e99d9bf75" />
-
-Load Balanced Application
-<img width="1280" height="560" alt="WhatsApp Image 2026-08-29 at 12 00 10 AM" src="https://github.com/user-attachments/assets/1ac1cdb2-3c06-4650-aec5-0087033627de" />
-
-Auto Scaling Recovery
-<img width="1683" height="595" alt="Auto Scaling" src="https://github.com/user-attachments/assets/c7d67cdb-a1eb-4ceb-9e08-493de118da7e" />
-
-CloudWatch Dashboard
-<img width="1920" height="478" alt="cloudwatch dashboard" src="https://github.com/user-attachments/assets/d16d1a6f-20c7-4e47-abc1-bba37b6b05f3" />

@@ -104,8 +104,9 @@ EC2 instances use an IAM Instance Role instead of stored AWS credentials. The EC
 
 ### Application Deployment with S3
 Application code is stored in: s3://harry-bucket-project/app/server.py  
-When a new EC2 instance is launched, Launch Template User Data automatically retrieves the latest application file from S3.
+When a new EC2 instance is launched, Launch Template User Data automatically retrieves the latest application file from S3.  
 <img width="534" height="87" alt="fileretrieves3" src="https://github.com/user-attachments/assets/3bea333a-9dff-4dac-a9bb-660e72bf96de" />
+<img width="960" height="367" alt="application" src="https://github.com/user-attachments/assets/a67c3419-ca0f-4b99-aec9-5ed427bc8429" />
 
 ### CI/CD with GitHub Actions
 Automatically deploys application changes to AWS. The pipeline is triggered when files inside the "app/" directory are pushed to the main branch.

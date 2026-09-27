@@ -5,7 +5,7 @@ The application runs on private EC2 instances across multiple Availability Zones
 
 
 ## Architecture
-![Uploading architecture diagram.png…]()
+<img width="900" height="600" alt="architecture diagram" src="https://github.com/user-attachments/assets/9dfd1f40-b23c-428c-a334-707621b4a4ea" />
 
 ## AWS Services Used
 - Amazon VPC
@@ -80,8 +80,10 @@ A Target Tracking Scaling Policy was configured using average EC2 CPU utilizatio
 ### Alerting with Amazon SNS
 Integrated with monitoring and Auto Scaling notifications. This provides email notifications when important infrastructure events occur.  
 <img width="300" height="550" alt="WhatsApp Image 2026-09-27 at 10 50 39 PM" src="https://github.com/user-attachments/assets/7376df25-dfd7-407d-987f-bf1d6f7ed261" /> <img width="300" height="550" alt="WhatsApp Image 2026-09-27 at 10 50 40 PM" src="https://github.com/user-attachments/assets/e246a204-b9fd-43be-a8bf-8a39a90fa80b" />
+
 ### Security
 The architecture separates public-facing and application resources using dedicated Security Groups.
+
 #### 1. ALB Security Group
 Allows:
 HTTP :80
@@ -99,30 +101,39 @@ The application servers need access to Amazon S3 but are located in private subn
 ### IAM Roles and Least Privilege
 EC2 instances use an IAM Instance Role instead of stored AWS credentials. The EC2 role allows the application servers to retrieve deployment files from the required S3 bucket.
 <img width="1628" height="828" alt="ec2roles" src="https://github.com/user-attachments/assets/a43f1bbc-2db5-4b7d-994f-37f95c1228cf" />
+
 ### Application Deployment with S3
 Application code is stored in: s3://harry-bucket-project/app/server.py  
 When a new EC2 instance is launched, Launch Template User Data automatically retrieves the latest application file from S3.
+<img width="534" height="87" alt="fileretrieves3" src="https://github.com/user-attachments/assets/3bea333a-9dff-4dac-a9bb-660e72bf96de" />
+
 ### CI/CD with GitHub Actions
 Automatically deploys application changes to AWS. The pipeline is triggered when files inside the "app/" directory are pushed to the main branch.
+
 ### GitHub OIDC Authentication
 GitHub Actions authenticates to AWS using OpenID Connect instead of long-lived AWS access keys. This removes the need to store permanent AWS Access Key IDs and Secret Access Keys in GitHub. The IAM trust relationship is restricted to this repository and the main branch.
 <img width="1609" height="812" alt="githubroles" src="https://github.com/user-attachments/assets/c21da8d7-2d5d-4691-9ba1-b2e78c7ac6e4" />
+
 ### CI Validation
 Before deployment, GitHub Actions performs a Python syntax check. "python -m py_compile app/server.py"
 If the Python application contains a syntax error, the deployment step does not continue.
+
 ### Rolling Deployment
 After the new application is uploaded to S3, GitHub Actions starts an Auto Scaling Instance Refresh. A short instance warm-up period is configured so the application has time to start before the deployment continues.
+
 ## Project Testing
 ### Load Balancing Test
 - Multiple requests were sent to the Application Load Balancer. Different EC2 hostnames confirmed that the ALB was distributing requests across multiple instances.
+
 ### Self-Healing Test
 - One EC2 instance was manually terminated.
 <img width="1586" height="324" alt="selfhealing" src="https://github.com/user-attachments/assets/03fd4045-03cc-47dd-bb48-00c197d64726" />
-Result:
+
 ### Auto Scaling Group Test
 - CPU workload was generated against the application.
 <img width="1100" height="550" alt="cpu-utilization" src="https://github.com/user-attachments/assets/ee078697-9cc4-4b19-b4bc-de9c450d2f9f" />
 <img width="1549" height="189" alt="ASG-Scaling" src="https://github.com/user-attachments/assets/0e68ec74-662c-4f83-a560-4fdc1c204eeb" />
+
 ### CI/CD Test
 - The application text in "server.py" was changed and committed to the main branch.
 GitHub Actions automatically:
@@ -132,11 +143,7 @@ GitHub Actions automatically:
 - Started an Instance Refresh
 - Replaced EC2 instances
 - Deployed the updated application
-
-## More Screenshots
-
-
-
+<img width="1919" height="781" alt="CICD" src="https://github.com/user-attachments/assets/e92cc277-0879-46b9-8362-f12812a27596" />
 # What I Learned
 This project provided hands-on experience with:
 - Designing a highly available AWS VPC architecture

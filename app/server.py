@@ -13,7 +13,7 @@ class Handler(BaseHTTPRequestHandler):
         </head>
         <body>
             <h1>AWS High Availability Web Application</h1>
-            <p>Deployed with GitHub Actions CI/CD.</p>
+            <p>Deployed with GitHub Actions CI/CD version 2</p>
             <p>Server: {hostname}</p>
         </body>
         </html>

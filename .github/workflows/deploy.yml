@@ -38,3 +38,4 @@ jobs:
         run: |
           aws autoscaling start-instance-refresh \
             --auto-scaling-group-name harry-web-asg
+            --preferences '{"InstanceWarmup":60}'
